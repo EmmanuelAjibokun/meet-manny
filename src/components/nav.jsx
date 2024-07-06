@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import icon from "../assets/bitmoji.jpg"
 
 const Nav = () => {
@@ -6,11 +7,11 @@ const Nav = () => {
       <div>
         <img src={icon} alt="manny's bitmoji" className="rounded-full w-12"/></div>
       <ul className="flex gap-6 items-center ">
-        <li className="hover:text-blue-600 hover:cursor-pointer transition-colors">Home</li>
-        <li className="hover:text-blue-600 hover:cursor-pointer transition-colors">About me</li>
-        <li className="hover:text-blue-600 hover:cursor-pointer transition-colors">Works</li>
-        <li className="hover:text-blue-600 hover:cursor-pointer transition-colors">Contact me</li>
-        <li className="hover:text-blue-600 hover:cursor-pointer transition-colors">Resume</li>
+        <li className="hover:text-blue-600 hover:cursor-pointer transition-colors"><Link to="/" className="text-white">Home</Link></li>
+        <li className="hover:text-blue-600 hover:cursor-pointer transition-colors"><Link to="/about" className="text-white">About me</Link></li>
+        <li className="hover:text-blue-600 hover:cursor-pointer transition-colors"><Link to="/works" className="text-white">Works</Link></li>
+        <li className="hover:text-blue-600 hover:cursor-pointer transition-colors"><Link to="/contact" className="text-white">Contact me</Link></li>
+        <li className="hover:text-blue-600 hover:cursor-pointer transition-colors "><a href="" className="text-white">Resume</a></li>
         <div id="themeswitcher"></div>
       </ul>
     </nav>

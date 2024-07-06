@@ -1,13 +1,19 @@
 import './App.css'
-import {Hero, Nav, Projects} from "./components/index.js"
+import Home from './pages/Home'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
 
   return (
     <>
-      <Nav/>
-      <Hero/>
-      <Projects/>
+
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/about' element={<Home/>} />
+        <Route path='/contact' element={<Home/>} />
+        <Route path='/works' element={<Home/>} />
+      </Routes>
+      
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
