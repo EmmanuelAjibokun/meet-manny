@@ -1,13 +1,11 @@
-import {Hero, Nav, Projects, Skills} from "../components/index.js"
+import {Hero, Projects } from "../components/index.js"
 
 
 const Home = () => {
   return (
     <>
-      <Nav/>
       <Hero/>
       <Projects/>
-      <Skills/>
     </>
   )
 }
