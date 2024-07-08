@@ -1,10 +1,10 @@
-
+import profile from "../assets/IMG_8021.jpg"
 
 const Profile = () => {
   return(
     <main className="flex gap-12 items-center ">
       <div>
-        <img src="" alt="profile picture" />
+        <img src={profile} alt="profile picture" />
       </div>
       <div>
         <p>
