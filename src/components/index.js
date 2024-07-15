@@ -4,5 +4,6 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 import Profile from "./Profile";
 import Footer from "./Footer";
+import Icons from "./Icons";
 
-export {Nav, Hero, Projects, Skills, Profile, Footer}
+export {Nav, Hero, Projects, Skills, Profile, Footer, Icons}
