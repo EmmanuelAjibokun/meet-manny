@@ -1,35 +1,29 @@
 /* eslint-disable react/prop-types */
 
 
+import { TypeAnimation } from 'react-type-animation';
 import { useEffect, useState, useRef } from "react";
 import {Icons} from "./index"
 
 const AnimatedText = ({text}) => {
-  const [visibleChars, setVisibleChars] = useState(0);
+  const [visibleChars, setVisibleChars] = useState(false);
   const textRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const interval = setInterval(() => {
-              setVisibleChars((prev) => {
-                if (prev < text.length) {
-                  return prev + 1;
-                } else {
-                  clearInterval(interval);
-                  return prev;
-                }
-              });
-            }, 100); // Adjust the delay as needed
+  const handleIntersection = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setVisibleChars(false); // Reset the state to trigger reanimation
+        setTimeout(() => {
+          setVisibleChars(true);
+        }, 100); // Small delay to ensure re-render
+      }
+    });
+  };
 
-            observer.unobserve(entry.target); // Stop observing once the animation starts
-          }
-        });
-      },
-      { threshold: 0.1 } // Trigger when 10% of the component is visible
-    );
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.1, // Trigger when 10% of the component is visible
+    });
 
     if (textRef.current) {
       observer.observe(textRef.current);
@@ -40,20 +34,20 @@ const AnimatedText = ({text}) => {
         observer.unobserve(textRef.current);
       }
     };
-  }, [text]);
+  }, []);
 
   return (
-    <p ref={textRef} className="flex flex-wrap" >
-      {text.split('').map((char, index) => (
-        <span
-          key={index}
-          className={`inline-block text-black w-auto  text-6xl font-bold transition-opacity duration-500 ease-out transform ${index < visibleChars ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
-          style={{ display: 'inline-block' }}
-        >
-          {char + " "}
-        </span>
-      ))}
-    </p>
+    <div ref={textRef} className="flex justify-center items-center">
+      {visibleChars && (
+        <TypeAnimation
+          sequence={[text, 2000]} // 2000ms pause after typing
+          wrapper="p"
+          cursor={false}
+          repeat={0} // Do not repeat the animation
+          className="text-6xl font-bold text-black block"
+        />
+      )}
+    </div>
   )
 
 }
@@ -62,7 +56,14 @@ const Footer = () => {
   return (
     <footer className='bg-[rgb(228,243,255)] font-sans p-10 flex flex-col items-center gap-8'>
       {/* <p className="text-black w-auto  text-6xl font-bold">Want us to work <br />together?</p> */}
-      <AnimatedText text="Want us to work together?" />
+      <div className="flex flex-col justify-center items-center">
+        <div className="mb-2"> {/* Margin bottom to separate lines */}
+          <AnimatedText text="Want us to work" />
+        </div>
+        <div>
+          <AnimatedText text="together?" />
+        </div>
+      </div>
       <div className='flex flex-col items-center max-w-screen-2xl mx-auto gap-8'>
         <button className='bg-[#FF6B35] w-fit py-3 px-5 rounded-full '>Contact Me</button>
         <Icons/>
