@@ -1,19 +1,30 @@
 import { Link } from "react-router-dom";
 import icon from "../assets/bitmoji.jpg"
+import ham from "../assets/ham.png"
+import close from "../assets/close.png"
+import { useState } from "react";
 
 const Nav = () => {
+  const [menuToggled, setMenuToggled] = useState(false)
+
+  const clickNav = () => {
+    console.log(menuToggled);
+    setMenuToggled(prev => !prev)
+  }
+
   return (
-    <nav className="flex mx-20 my-10 justify-between font-bold text-base ">
+    <nav className={`flex justify-between font-bold text-base bg-[#E4F3FF] items-center md:px-20 px-10 py-6 border-b-[1px] border-b-black border ${menuToggled ? 'fixed' : ''} z-50 left-0 right-0`}>
       <div>
         <img src={icon} alt="manny's bitmoji" className="rounded-full w-14 border-2 border-[#a56526]"/></div>
-      <ul className="flex gap-6 items-center ">
-        <li className="hover:text-blue-600 hover:cursor-pointer transition-colors"><Link to="/" className="text-white">Home</Link></li>
-        <li className="hover:text-blue-600 hover:cursor-pointer transition-colors"><Link to="/about" className="text-white">About me</Link></li>
-        <li className="hover:text-blue-600 hover:cursor-pointer transition-colors"><Link to="/works" className="text-white">Works</Link></li>
-        <li className="hover:text-blue-600 hover:cursor-pointer transition-colors"><Link to="/contact" className="text-white">Contact me</Link></li>
-        <li className="hover:text-blue-600 hover:cursor-pointer transition-colors "><a href="" className="text-white">Resume</a></li>
+      <ul className={`flex gap-8  font-light items-center text-base md:relative md:navv z-50 ${menuToggled ? 'show' : ''} md:flex-row flex-col fixed justify-start md:justify-end h-dvh md:h-auto bg-[#E4F3FF] left-0 right-0 bottom-0 ${menuToggled ? 'translate-x-0' : 'translate-x-[-100%]'} transition-transform duration-500 ease-in-out md:translate-x-0 `}>
+        <li className="hover:cursor-pointer"><Link to="/" className="text-[#010536]">Home</Link></li>
+        <li className="hover:cursor-pointer"><Link to="/about" className="text-[#010536]">About me</Link></li>
+        <li className="hover:cursor-pointer"><Link to="/works" className="text-[#010536]">Works</Link></li>
+        <li className="hover:cursor-pointer"><Link to="/contact" className="text-[#010536]">Contact me</Link></li>
+        <li className="hover:cursor-pointer"><a href="" className="text-[#010536]">Resume</a></li>
         <div id="themeswitcher"></div>
       </ul>
+      {menuToggled ? <img src={close} width="30px" className="md:hidden block cursor-pointer" onClick={clickNav} /> : <img src={ham} alt="hamburger" className='md:hidden block cursor-pointer' onClick={clickNav}/> }
     </nav>
   )
 }
