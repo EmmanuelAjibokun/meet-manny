@@ -5,7 +5,7 @@ import { TypeAnimation } from 'react-type-animation';
 import { useEffect, useState, useRef } from "react";
 import {Icons} from "./index"
 
-const AnimatedText = ({text}) => {
+const AnimatedText = ({text, customClassName}) => {
   const [visibleChars, setVisibleChars] = useState(false);
   const textRef = useRef(null);
 
@@ -44,7 +44,7 @@ const AnimatedText = ({text}) => {
           wrapper="p"
           cursor={false}
           repeat={0} // Do not repeat the animation
-          className="text-6xl font-bold text-black block"
+          className={customClassName}
         />
       )}
     </div>
@@ -58,10 +58,10 @@ const Footer = () => {
       {/* <p className="text-black w-auto  text-6xl font-bold">Want us to work <br />together?</p> */}
       <div className="flex flex-col justify-center items-center">
         <div className="mb-2"> {/* Margin bottom to separate lines */}
-          <AnimatedText text="Want us to work" />
+          <AnimatedText text="Want us to work" customClassName={"text-6xl font-bold text-black block"} />
         </div>
         <div>
-          <AnimatedText text="together?" />
+          <AnimatedText text="together?" customClassName={"text-6xl font-bold text-black block"} />
         </div>
       </div>
       <div className='flex flex-col items-center max-w-screen-2xl mx-auto gap-8'>
@@ -72,4 +72,4 @@ const Footer = () => {
   )
 }
 
-export default Footer;
+export { Footer, AnimatedText };

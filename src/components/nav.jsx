@@ -3,7 +3,7 @@ import icon from "../assets/bitmoji.jpg"
 
 const Nav = () => {
   return (
-    <nav className="flex mx-20 my-10 justify-between font-bold text-base">
+    <nav className="flex mx-20 my-10 justify-between font-bold text-base ">
       <div>
         <img src={icon} alt="manny's bitmoji" className="rounded-full w-14 border-2 border-[#a56526]"/></div>
       <ul className="flex gap-6 items-center ">
