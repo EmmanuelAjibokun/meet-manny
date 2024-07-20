@@ -7,13 +7,13 @@ const Hero = () => {
   return(
     <>
       {/* <ParticlesBackground/> */}
-      <main className="px-20 py-10 flex gap-12 items-center ">
+      <main className="px-10 py-10 flex gap-12 items-center md:flex-row flex-col text-black bg-[#E4F3FF]">
         <div className="shrink-[3] flex flex-col gap-4">
           <div>
             <p className="inline">Hello </p>
             <img src={worker} alt="worker icon" width={20} className="inline" />
           </div>
-          <h1>I&apos;m Emmanuel Ajibokun</h1>
+          <h1 className="font-bold md:text-5xl text-4xl">I&apos;m Emmanuel Ajibokun</h1>
           <p>I&apos;m a Frontend Developer based in Nigeria, dedicated to continual improvement of both my professional skills and personal growth. I specializing in building exceptional websites and making the web accessible to everyone.</p>
           <div>
             <button>View my resume <span>-</span></button>
