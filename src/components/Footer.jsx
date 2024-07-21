@@ -58,10 +58,10 @@ const Footer = () => {
       {/* <p className="text-black w-auto  text-6xl font-bold">Want us to work <br />together?</p> */}
       <div className="flex flex-col justify-center items-center">
         <div className="mb-2"> {/* Margin bottom to separate lines */}
-          <AnimatedText text="Want us to work" customClassName={"text-6xl font-bold text-black block"} />
+          <AnimatedText text="Want us to work" customClassName={"md:text-6xl text-4xl font-bold text-black block"} />
         </div>
         <div>
-          <AnimatedText text="together?" customClassName={"text-6xl font-bold text-black block"} />
+          <AnimatedText text="together?" customClassName={"md:text-6xl text-4xl font-bold text-black block"} />
         </div>
       </div>
       <div className='flex flex-col items-center max-w-screen-2xl mx-auto gap-8'>
