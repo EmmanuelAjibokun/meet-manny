@@ -53,4 +53,7 @@
   position: relative;
 }
 
-/* Projects Component */
+/* Skills Component */
+h5 {
+  font-weight: 700;
+}

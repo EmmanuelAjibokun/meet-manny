@@ -8,22 +8,22 @@ const Icons = () => {
   return (
     <div className="flex gap-4 max-w-48">
       <div>
-        <a href="#">
+        <a href="https://github.com/EmmanuelAjibokun">
           <img src={github} alt="github icon" />
         </a>
       </div>
       <div>
-        <a href="#">
+        <a href="https://x.com/meet_manny">
           <img src={twitter} alt="twitter icon" />
         </a>
       </div>
       <div>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/emmanuel-ajibokun/">
           <img src={linkedin} alt="linkedin icon" />
         </a>
       </div>
       <div>
-        <a href="#">
+        <a href="mailto:emmanuelajibokunedu@gmail.com">
           <img src={email} alt="mail icon" />
         </a>
       </div>
