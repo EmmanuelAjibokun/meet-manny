@@ -7,7 +7,7 @@ const Hero = () => {
   return(
     <>
       {/* <ParticlesBackground/> */}
-      <main className="px-10 py-10 flex gap-12 items-center md:flex-row flex-col text-black bg-[#E4F3FF]">
+      <main className="px-10 md:px-20 py-10 flex gap-12 items-center md:flex-row flex-col text-black bg-[#E4F3FF] h-screen" style={{height: "calc(100vh - 106px)"}}>
         <div className="shrink-[3] flex flex-col gap-4">
           <div>
             <p className="inline">Hello </p>

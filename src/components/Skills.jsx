@@ -66,9 +66,9 @@ const Skills = () => {
       <h3 className="font-bold md:text-5xl text-4xl flex justify-center relative text-black mb-10">Skills<span className="absolute h-[6px] w-10 md:w-16 bg-slate-600 rounded-l-full rounded-r-full bottom-[-10px]"></span></h3>
 
       <div className="flex justify-between md:flex-row flex-col font-medium gap-5">
-        <div>
+        <div className="flex flex-col gap-3">
           <h5>Programming Languages</h5>
-          <div id="languages" className="flex flex-wrap gap-3">
+          <div id="languages" className="flex flex-wrap gap-4">
             <div id="language" className="flex items-end flex-nowrap gap-[6px]">
               <img src={js} width={26}  alt="Javascript" />
               {/* <span>JavaScript</span> */}
@@ -89,9 +89,9 @@ const Skills = () => {
           </div>
         </div>
 
-        <div>
+        <div className="flex flex-col gap-3">
           <h5>Libraries and Frameworks</h5>
-          <div id="languages" className="flex flex-wrap gap-3">
+          <div id="languages" className="flex flex-wrap gap-4">
             <div id="language" className="flex items-end flex-nowrap gap-[6px]">
               <img src={react} width={26} alt="React" />
               <AnimatedText text={"React"} />
@@ -111,9 +111,9 @@ const Skills = () => {
           </div>
         </div>
 
-        <div>
+        <div className="flex flex-col gap-3">
           <h5>Tools and Platforms</h5>
-          <div id="languages" className="flex flex-wrap gap-3">
+          <div id="languages" className="flex flex-wrap gap-4">
             <div id="language" className="flex items-end flex-nowrap gap-[6px]">
               <img src={vercel} width={26} alt="Vercel" />
               <AnimatedText text={"Vercel"} />

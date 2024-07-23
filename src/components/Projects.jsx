@@ -65,8 +65,8 @@ const Projects = () => {
         <div className="flex gap-8 flex-col md:flex-row ">
           <div className="grid flex-[.6] grow text-black">
             <AnimatedText text={"Sentinel"} customClassName="Outfit text-white font-bold text-xl mr-auto mb-[25px] bg-[#FF6B35] py-[2.14px] px-[9.86px] inline-block self-end w-fit justify-self-start"/>
-            <p className="md:text-lg md:text-left">Do you need an automated system specially built for your business processes? Say goodbye to the mundane and hello to efficiency and Let the magic of automation transform your business. Our meticulous team has got you covered. </p>
-            <a href="#" className="flex items-center"><p className="md:text-base text-left text-xs font-bold ">More Detail</p> <img src={danger} alt="danger sign" className="h-5" /></a>
+            <p className="md:text-lg md:text-left">This application is designed for administrators within an organization. It enables staff members to input prompts into a model, which then generates price predictions for their products based on the provided information</p>
+            <a href="https://ai.sentinelock.com/" className="flex items-center"><p className="md:text-base text-left text-xs font-bold ">More Detail</p> <img src={danger} alt="danger sign" className="h-5" /></a>
           </div>
           <div className="relative grow overflow-hidden min-w-[150px] md:max-w-[400px] md:left-16 left-7" ref={sentinelRef}>
             <div className="relative" style={{ paddingTop: '66.67%' }}>
@@ -83,8 +83,8 @@ const Projects = () => {
           </div>
           <div className="flex-[.6] grid grow order-1 md:order-2 text-black">
             <AnimatedText text={"CV Application"} customClassName="Outfit text-white font-bold text-xl mr-auto mb-[25px] bg-[#FF6B35] py-[2.14px] px-[9.86px] inline-block self-end w-fit justify-self-start"/>
-            <p className="md:text-lg md:text-left ">Be among the first to experience our cutting-edge automation products before official launch. Gain early access to innovative features by opting in to our exclusive pre-release program, collaborating directly with Tecohol community of automation enthusiasts.</p>
-            <a href="#" className="flex items-center"><p className="md:text-base text-left text-xs font-bold ">More Detail</p> <img src={danger} alt="danger sign" className="h-5" /></a>
+            <p className="md:text-lg md:text-left ">This user-friendly tool simplifies the process of creating professional resumes. With a sleek and intuitive interface, users can easily input their personal details, work experience, and education.</p>
+            <a href="https://github.com/EmmanuelAjibokun/cv-application" className="flex items-center"><p className="md:text-base text-left text-xs font-bold ">More Detail</p> <img src={danger} alt="danger sign" className="h-5" /></a>
           </div>
         </div>
 
