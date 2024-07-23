@@ -3,13 +3,21 @@ import icon from "../assets/bitmoji.jpg"
 import ham from "../assets/ham.png"
 import close from "../assets/close.png"
 import { useState } from "react";
+import { useMediaQuery } from 'react-responsive';
+
 
 const Nav = () => {
   const [menuToggled, setMenuToggled] = useState(false)
 
+  // Define the media query for medium screens (example: 768px and above)
+  const isMediumScreen = useMediaQuery({ query: '(min-width: 768px)' });
+
   const clickNav = () => {
     console.log(menuToggled);
     setMenuToggled(prev => !prev)
+    if (isMediumScreen){
+      setMenuToggled(false)
+    }
   }
 
   return (
