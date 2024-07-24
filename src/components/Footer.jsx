@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
 
 
@@ -65,7 +66,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='flex flex-col items-center max-w-screen-2xl mx-auto gap-8'>
-        <button className='bg-[#FF6B35] w-fit py-3 px-5 rounded-full '>Contact Me</button>
+        <a href="mailto:emmanuelajibokunedu@gmail.com"><button className='bg-[#FF6B35] w-fit py-3 px-5 rounded-full '>Contact Me</button></a>
         <Icons/>
       </div>
     </footer>
