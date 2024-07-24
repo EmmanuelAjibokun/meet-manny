@@ -21,7 +21,7 @@ const Nav = () => {
   }
 
   return (
-    <nav className={`flex justify-between font-bold text-base bg-[#E4F3FF] items-center md:px-20 px-10 py-6 border-b-[1px] border-b-black border ${menuToggled ? 'fixed' : 'static'} z-50 left-0 right-0`}>
+    <nav className={`flex justify-between font-bold text-base bg-[#E4F3FF] items-center md:px-20 px-10 py-6  border-b-[1px] border-b-black border z-50 left-0 right-0`}>
       <div>
         <img src={icon} alt="manny's bitmoji" className="rounded-full w-14 border-2 border-[#a56526]"/>
       </div>

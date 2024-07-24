@@ -1,8 +1,6 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
-
-import { Profile } from "../components";
-import dev from "../assets/dev.png"
+import multitasker from "../assets/multitasker.png"
+import { Projects } from "../components"
 
 import { useState, useEffect, useRef } from "react";
 import { TypeAnimation } from 'react-type-animation';
@@ -49,21 +47,21 @@ const AnimatedText = ({ text, customClassName }) => {
   );
 };
 
-const AboutMe = () => {
+const Works = () => {
   return (
-    <div className="">
-      <section className="flex flex-col pt-32 gap-3 px-20 py-10 bg-[#E4F3FF] text-black" style={{height: "calc(100vh - 106px)"}}>
-        <div className="flex items-end flex-nowrap gap-[6px]">
-          <img src={dev} alt="multitasker icon" width={30} className="inline" />
-          <p className="inline font-medium">ABOUT EMMANUEL AJIBOKUN</p>
+    <div>
+      <section className="flex flex-col pt-20 gap-5 px-20 py-10 bg-[#E4F3FF] text-black" style={{height: "calc(100vh - 106px)"}}>
+        <div className="flex items-center flex-nowrap gap-[6px]">
+          <img src={multitasker} alt="multitasker icon" width={36} className="inline" />
+          <p className="inline font-medium text-xl">PROJECTS</p>
         </div>
-        <AnimatedText text={"Frontend Engineer"} customClassName="font-bold md:text-7xl text-4xl" />
-        <p >I am a Frontend Engineer based in Akure, Nigeria</p>
+        <AnimatedText text={"Selected Works"} customClassName="font-bold md:text-7xl text-4xl" />
+        <p>Not all my projects codebase are public; some are restricted by NDA</p>
       </section>
       
-      <Profile/>
+      <Projects/>
     </div>
   )
 }
 
-export {AboutMe, AnimatedText};
+export default Works

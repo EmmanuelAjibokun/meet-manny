@@ -1,12 +1,14 @@
 import profile from "../assets/IMG_8021.jpg"
+import { AnimatedText } from "../pages/AboutMe";
 
 const Profile = () => {
   return(
-    <main className="flex gap-12 items-center ">
-      <div>
-        <img src={profile} alt="profile picture" />
+    <main className="flex gap-16 items-stretch md:flex-row flex-col justify-center mx-auto lg:max-w-[1000px] py-[75px] md:px-20 px-10 max-w-screen-2xl bg-white text-black">
+      <div className="flex-grow md:basis-1/2 md:max-w-none md:flex-shrink max-w-80 ">
+        <img src={profile} alt="profile picture" className="rounded-lg w-full h-full  object-cover" />
       </div>
-      <div>
+      <div className="flex-grow md:basis-1/2 justify-center">
+        <AnimatedText text={"Meet Manny"} customClassName={"inline font-bold text-3xl"}/>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas soluta eaque doloremque minima? Fugit ipsa placeat veritatis soluta repellendus necessitatibus molestias omnis ipsam asperiores maiores repudiandae, eos, voluptatem sed praesentium.
           Error eligendi hic eius deserunt quibusdam tempora quia ratione nulla, nesciunt nam! Asperiores velit odio cupiditate laudantium blanditiis totam reiciendis quisquam aliquam, est beatae facilis, a laborum amet pariatur delectus.

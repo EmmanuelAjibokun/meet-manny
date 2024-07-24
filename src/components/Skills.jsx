@@ -14,7 +14,6 @@ import formik from "../assets/formik.svg"
 import material from "../assets/material.png"
 
 import { useState, useEffect, useRef } from "react";
-// import { AnimatedText } from ".";
 import { TypeAnimation } from 'react-type-animation';
 
 const AnimatedText = ({ text }) => {
