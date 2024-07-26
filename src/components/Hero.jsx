@@ -13,7 +13,7 @@ const Hero = () => {
             <p className="inline">Hello </p>
             <img src={worker} alt="worker icon" width={20} className="inline" />
           </div>
-          <h1 className="font-bold md:text-5xl text-3xl">I&apos;m Emmanuel Ajibokun</h1>
+          <h1 className="font-bold md:text-5xl text-3xl sm:text-2xl">I&apos;m Emmanuel Ajibokun</h1>
           <p>I&apos;m a Frontend Developer based in Nigeria, dedicated to continual improvement of both my professional skills and personal growth. I specializing in building exceptional websites and making the web accessible to everyone.</p>
           <div>
             <button>View my resume <span>-</span></button>

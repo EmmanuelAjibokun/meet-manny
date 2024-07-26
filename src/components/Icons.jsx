@@ -6,7 +6,7 @@ import twitter from "../assets/twitter.png"
 const Icons = () => {
 
   return (
-    <div className="flex gap-4 max-w-48">
+    <div className="flex gap-4 max-w-48 sm:w-36 sm:gap-2">
       <div>
         <a href="https://github.com/EmmanuelAjibokun">
           <img src={github} alt="github icon" />
