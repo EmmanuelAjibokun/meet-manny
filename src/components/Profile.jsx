@@ -8,14 +8,16 @@ const Profile = () => {
         <div className="flex-grow md:basis-1/2 md:max-w-none md:flex-shrink max-w-80 ">
           <img src={profile} alt="profile picture" className="rounded-lg w-full h-full  object-cover" />
         </div>
-        <div className="flex-grow md:basis-1/2 justify-center">
-          <AnimatedText text={"Meet Manny"} customClassName={"inline font-bold text-3xl"}/>
+        <div className="flex-grow md:basis-1/2 justify-center flex flex-col gap-4">
+          <AnimatedText text={"Meet Manny."} customClassName={"inline font-bold text-3xl"}/>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas soluta eaque doloremque minima? Fugit ipsa placeat veritatis soluta repellendus necessitatibus molestias omnis ipsam asperiores maiores repudiandae, eos, voluptatem sed praesentium.
-            Error eligendi hic eius deserunt quibusdam tempora quia ratione nulla, nesciunt nam! Asperiores velit odio cupiditate laudantium blanditiis totam reiciendis quisquam aliquam, est beatae facilis, a laborum amet pariatur delectus.
-            Consequuntur, nulla aut? Aliquam quos ea eveniet cumque voluptas tempore in consequuntur! Voluptates aspernatur veritatis saepe. Expedita, ad! Commodi iusto doloribus repellat adipisci, ipsam eaque dolor eligendi explicabo illum impedit!
-            Eligendi necessitatibus ullam error earum expedita hic ex illo explicabo! Soluta exercitationem fuga, ullam odio, maiores obcaecati velit voluptas corrupti, accusantium aperiam excepturi. Dolorum earum commodi quam odio a qui.
-            Quisquam totam qui quaerat eaque in laborum molestiae nam pariatur, facere deleniti natus suscipit alias nulla error accusamus optio ullam esse. Ea repudiandae id voluptas doloribus doloremque facilis ratione corrupti?
+          I am a Frontend Engineer with two years of experience, based in Lagos, Nigeria. Most of my last five years were spent in Akure for my tertiary education. My ability to grasp concepts quickly has led me to dabble in other areas of tech, such as machine learning and AI.
+          </p>
+          <p>
+            Over the past years, I have taken online courses and dedicated my time to building projects that nourish my understanding of various concepts and reinforce my knowledge.
+          </p>
+          <p>
+            When I&apos;m not coding, you can often find me watching anime or reading the Bible, as my communion with God has become a crucial part of my life. I also have an everlasting love for YouTube content. After all, it is the platform that has helped me connect most with activities I love, from watching anime spoilers (lol) to listening to sermons from my favorite ministers, to watching self-help motivation videos, and those that help me become a better engineer.
           </p>
         </div>
       </section>

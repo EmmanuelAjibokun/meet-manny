@@ -50,12 +50,12 @@ const AnimatedText = ({ text, customClassName }) => {
 const Works = () => {
   return (
     <div>
-      <section className="flex flex-col pt-20 gap-5 px-20 py-10 bg-[#E4F3FF] text-black" style={{height: "calc(100vh - 106px)"}}>
+      <section className="flex flex-col pt-20 gap-5 px-20 sm:px-10 py-10 bg-[#E4F3FF] text-black" style={{height: "calc(100vh - 106px)"}}>
         <div className="flex items-center flex-nowrap gap-[6px]">
           <img src={multitasker} alt="multitasker icon" width={36} className="inline" />
-          <p className="inline font-medium text-xl">PROJECTS</p>
+          <p className="inline font-medium text-xl sm:text-sm">PROJECTS</p>
         </div>
-        <AnimatedText text={"Selected Works"} customClassName="font-bold md:text-7xl text-4xl" />
+        <AnimatedText text={"Selected Works"} customClassName="font-bold md:text-7xl text-4xl sm:text-3xl" />
         <p>Not all my projects codebase are public; some are restricted by NDA</p>
       </section>
       

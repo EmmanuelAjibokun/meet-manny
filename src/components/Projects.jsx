@@ -59,7 +59,7 @@ const Projects = () => {
 
   return (
     <main className="py-[75px] md:px-20 px-10 max-w-screen-2xl mx-auto bg-white">
-      <h3 className="font-bold md:text-5xl text-4xl flex justify-center relative text-black">Selected Projects <span className="absolute h-[6px] w-20 md:w-32 bg-slate-600 rounded-l-full rounded-r-full bottom-[-14px]"></span></h3>
+      <h3 className="font-bold md:text-5xl text-4xl sm:text-3xl flex justify-center relative text-black">Selected Projects <span className="absolute h-[6px] w-20 md:w-32 bg-slate-600 rounded-l-full rounded-r-full bottom-[-14px]"></span></h3>
       <div className="flex flex-col gap-20 mt-10">
 
         <div className="flex gap-8 flex-col md:flex-row ">

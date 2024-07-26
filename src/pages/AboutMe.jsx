@@ -52,10 +52,10 @@ const AnimatedText = ({ text, customClassName }) => {
 const AboutMe = () => {
   return (
     <div className="">
-      <section className="flex flex-col pt-32 gap-3 px-20 py-10 bg-[#E4F3FF] text-black" style={{height: "calc(100vh - 106px)"}}>
-        <div className="flex items-end flex-nowrap gap-[6px]">
-          <img src={dev} alt="multitasker icon" width={30} className="inline" />
-          <p className="inline font-medium">ABOUT EMMANUEL AJIBOKUN</p>
+      <section className="flex flex-col pt-32 gap-3 px-20 sm:px-10 py-10 bg-[#E4F3FF] text-black" style={{height: "calc(100vh - 106px)"}}>
+        <div className="flex items-center flex-nowrap gap-[6px]">
+          <img src={dev} alt="multitasker icon" width={30} className="inline sm:w-6" />
+          <p className="inline font-medium sm:text-sm">ABOUT EMMANUEL AJIBOKUN</p>
         </div>
         <AnimatedText text={"Frontend Engineer"} customClassName="font-bold md:text-7xl text-4xl" />
         <p >I am a Frontend Engineer based in Akure, Nigeria</p>

@@ -11,6 +11,7 @@ export default {
       // => @media (min-width: 1440px) { ... }
       'md': '768px',
       // => @media (min-width: 768px) { ... }
+      'sm': '300px',
     },
   },
   plugins: [],

@@ -62,26 +62,26 @@ const Skills = () => {
 
   return (
     <section className="py-[75px] md:px-20 px-10 max-w-screen-2xl mx-auto flex flex-col text-black bg-[rgb(228,243,255)]">
-      <h3 className="font-bold md:text-5xl text-4xl flex justify-center relative text-black mb-10">Skills<span className="absolute h-[6px] w-10 md:w-16 bg-slate-600 rounded-l-full rounded-r-full bottom-[-10px]"></span></h3>
+      <h3 className="font-bold md:text-5xl text-4xl sm:text-3xl flex justify-center relative text-black mb-10">Skills<span className="absolute h-[6px] w-10 md:w-16 bg-slate-600 rounded-l-full rounded-r-full bottom-[-10px]"></span></h3>
 
-      <div className="flex justify-between md:flex-row flex-col font-medium gap-5">
-        <div className="flex flex-col gap-3">
+      <div className="flex justify-between md:flex-row flex-col font-medium gap-7">
+        <div className="flex flex-col gap-3 ">
           <h5>Programming Languages</h5>
-          <div id="languages" className="flex flex-wrap gap-4">
-            <div id="language" className="flex items-end flex-nowrap gap-[6px]">
+          <div id="languages" className="flex flex-wrap gap-3">
+            <div id="language" className="flex items-end flex-nowrap gap-[4px]">
               <img src={js} width={26}  alt="Javascript" />
               {/* <span>JavaScript</span> */}
               <AnimatedText text={"JavaScript"} />
             </div>
-            <div id="language" className="flex items-end flex-nowrap gap-[6px]">
+            <div id="language" className="flex items-end flex-nowrap gap-[4px]">
               <img src={html} width={26} alt="Html" />
               <AnimatedText text={"HTML"}/>
             </div>
-            <div id="language" className="flex items-end flex-nowrap gap-[6px]">
+            <div id="language" className="flex items-end flex-nowrap gap-[4px]">
               <img src={sass} width={26} alt="Sass" />
               <AnimatedText text={"Sass"}/>
             </div>
-            <div id="language" className="flex items-end flex-nowrap gap-[6px]">
+            <div id="language" className="flex items-end flex-nowrap gap-[4px]">
               <img src={python} width={26} alt="Python" />
               <AnimatedText text={"Python"}/>
             </div>
@@ -90,20 +90,20 @@ const Skills = () => {
 
         <div className="flex flex-col gap-3">
           <h5>Libraries and Frameworks</h5>
-          <div id="languages" className="flex flex-wrap gap-4">
-            <div id="language" className="flex items-end flex-nowrap gap-[6px]">
+          <div id="languages" className="flex flex-wrap gap-3">
+            <div id="language" className="flex items-end flex-nowrap gap-[4px]">
               <img src={react} width={26} alt="React" />
               <AnimatedText text={"React"} />
             </div>
-            <div id="language" className="flex items-end flex-nowrap gap-[6px]">
+            <div id="language" className="flex items-end flex-nowrap gap-[4px]">
               <img src={material} width={26} alt="MaterialUI" />
               <AnimatedText text={"MaterialUI"} />
             </div>
-            <div id="language" className="flex items-end flex-nowrap gap-[6px]">
+            <div id="language" className="flex items-end flex-nowrap gap-[4px]">
               <img src={tailwind} width={26} alt="Tailwind" />
               <AnimatedText text={"TailwindCSS"} />
             </div>
-            <div id="language" className="flex items-end flex-nowrap gap-[6px]">
+            <div id="language" className="flex items-end flex-nowrap gap-[4px]">
               <img src={formik} width={26} alt="Formik" />
               <AnimatedText text={"Formik"} />
             </div>
@@ -112,20 +112,20 @@ const Skills = () => {
 
         <div className="flex flex-col gap-3">
           <h5>Tools and Platforms</h5>
-          <div id="languages" className="flex flex-wrap gap-4">
-            <div id="language" className="flex items-end flex-nowrap gap-[6px]">
+          <div id="languages" className="flex flex-wrap gap-3">
+            <div id="language" className="flex items-end flex-nowrap gap-[4px]">
               <img src={vercel} width={26} alt="Vercel" />
               <AnimatedText text={"Vercel"} />
             </div>
-            <div id="language" className="flex items-end flex-nowrap gap-[6px]">
+            <div id="language" className="flex items-end flex-nowrap gap-[4px]">
               <img src={github} width={26} alt="Github" />
               <AnimatedText text={"GitHub"} />
             </div>
-            <div id="language" className="flex items-end flex-nowrap gap-[6px]">
+            <div id="language" className="flex items-end flex-nowrap gap-[4px]">
               <img src={git} width={26} alt="Git" />
               <AnimatedText text={"Git"} />
             </div>
-            <div id="language" className="flex items-end flex-nowrap gap-[6px]">
+            <div id="language" className="flex items-end flex-nowrap gap-[4px]">
               <img src={photoshop} width={26} alt="Photoshop" />
               <AnimatedText text={"Photoshop"} />
             </div>
