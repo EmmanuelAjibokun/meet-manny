@@ -4,6 +4,7 @@ import ham from "../assets/ham.png"
 import close from "../assets/close.png"
 import { useState } from "react";
 import { useMediaQuery } from 'react-responsive';
+import resume from "../assets/MyResume.pdf";
 
 
 const Nav = () => {
@@ -30,7 +31,7 @@ const Nav = () => {
           <li onClick={clickNav} className="hover:cursor-pointer"><Link to="/about" className="text-[#010536] focus:font-bold">About me</Link></li>
           <li onClick={clickNav} className="hover:cursor-pointer"><Link to="/works" className="text-[#010536] focus:font-bold">Works</Link></li>
           {/* <li onClick={clickNav} className="hover:cursor-pointer"><Link to="/contact" className="text-[#010536]">Contact me</Link></li> */}
-          <li onClick={clickNav} className="hover:cursor-pointer"><a href="" className="text-[#010536]">Resume</a></li>
+          <li onClick={clickNav} className="hover:cursor-pointer"><a href={resume} target="_blank" rel="noopener noreferrer" className="text-[#010536]">Resume</a></li>
           <div id="themeswitcher"></div>
         </ul>
         {menuToggled ? <img src={close} width="30px" className="md:hidden block cursor-pointer" onClick={clickNav} /> : <img src={ham} alt="hamburger" className='md:hidden block cursor-pointer' onClick={clickNav}/> }
