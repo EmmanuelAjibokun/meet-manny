@@ -3,6 +3,7 @@
 import sentinel from "../assets/sentinel.png";
 import cvApp from "../assets/cv_application.png";
 import danger from "../assets/danger-sign.png"
+import rickNmorty from "../assets/Rick N Morty.png"
 import { useState, useEffect, useRef } from "react";
 import { AnimatedText } from ".";
 
@@ -10,8 +11,10 @@ const Projects = () => {
 
   const [tiltFrame1, setTiltFrame1] = useState(false);
   const [tiltFrame2, setTiltFrame2] = useState(false);
+  const [tiltFrame3, setTiltFrame3] = useState(false);
   const cvAppRef = useRef(null);
   const sentinelRef = useRef(null);
+  const memoRef = useRef(null);
 
   useEffect(() => {
     const observer1 = new IntersectionObserver(
@@ -38,6 +41,18 @@ const Projects = () => {
       { threshold: 0.2 }
     );
 
+    const observer3 = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTiltFrame3(true);
+            observer3.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
     if (sentinelRef.current) {
       observer1.observe(sentinelRef.current);
     }
@@ -46,12 +61,19 @@ const Projects = () => {
       observer2.observe(cvAppRef.current);
     }
 
+    if (memoRef.current) {
+      observer3.observe(memoRef.current);
+    }
+
     return () => {
       if (sentinelRef.current) {
         observer1.unobserve(sentinelRef.current);
       }
       if (cvAppRef.current) {
         observer2.unobserve(cvAppRef.current);
+      }
+      if (memoRef.current) {
+        observer3.unobserve(memoRef.current);
       }
     };
   }, []);
@@ -85,6 +107,19 @@ const Projects = () => {
             <AnimatedText text={"CV Application"} customClassName="Outfit text-white font-bold text-xl mr-auto mb-[25px] bg-[#FF6B35] py-[2.14px] px-[9.86px] inline-block self-end w-fit justify-self-start"/>
             <p className="md:text-lg md:text-left ">This user-friendly tool simplifies the process of creating professional resumes. With a sleek and intuitive interface, users can easily input their personal details, work experience, and education.</p>
             <a href="https://github.com/EmmanuelAjibokun/cv-application" className="flex items-center"><p className="md:text-base text-left text-xs font-bold ">More Detail</p> <img src={danger} alt="danger sign" className="h-5" /></a>
+          </div>
+        </div>
+
+        <div className="flex gap-8 flex-col md:flex-row ">
+          <div className="grid flex-[.6] grow text-black">
+            <AnimatedText text={"Rick N Morty Memo"} customClassName="Outfit text-white font-bold text-xl mr-auto mb-[25px] bg-[#FF6B35] py-[2.14px] px-[9.86px] inline-block self-end w-fit justify-self-start"/>
+            <p className="md:text-lg md:text-left">This application is a web based memory game that uses hooks to manage and utilize state while fetching and using data from an external API.</p>
+            <a href="https://rick-n-morty-memo.vercel.app/" className="flex items-center"><p className="md:text-base text-left text-xs font-bold ">More Detail</p> <img src={danger} alt="danger sign" className="h-5" /></a>
+          </div>
+          <div className="relative grow overflow-hidden min-w-[150px] md:max-w-[400px] md:left-16 left-7" ref={memoRef}>
+            <div className="relative" style={{ paddingTop: '66.67%' }}>
+              <img src={rickNmorty} alt="strategy" className={`absolute top-0 left-0 right-0 bottom-0 w-full h-full transition-transform duration-500 ease-in-out transform ${tiltFrame3 ? "rotate-[-5deg]" : ""} origin-top-right`} />
+            </div>
           </div>
         </div>
 
