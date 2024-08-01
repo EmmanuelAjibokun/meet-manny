@@ -2,8 +2,10 @@
 // import { Link } from "react-router-dom";
 import sentinel from "../assets/sentinel.png";
 import cvApp from "../assets/cv_application.png";
-import danger from "../assets/danger-sign.png"
-import rickNmorty from "../assets/Rick N Morty.png"
+import danger from "../assets/danger-sign.png";
+import rickNmorty from "../assets/Rick N Morty.png";
+import votify from "../assets/votify.png";
+
 import { useState, useEffect, useRef } from "react";
 import { AnimatedText } from ".";
 
@@ -12,9 +14,11 @@ const Projects = () => {
   const [tiltFrame1, setTiltFrame1] = useState(false);
   const [tiltFrame2, setTiltFrame2] = useState(false);
   const [tiltFrame3, setTiltFrame3] = useState(false);
+  const [tiltFrame4, setTiltFrame4] = useState(false);
   const cvAppRef = useRef(null);
   const sentinelRef = useRef(null);
   const memoRef = useRef(null);
+  const votifyRef = useRef(null);
 
   useEffect(() => {
     const observer1 = new IntersectionObserver(
@@ -53,6 +57,18 @@ const Projects = () => {
       { threshold: 0.2 }
     );
 
+    const observer4 = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTiltFrame4(true);
+            observer4.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
     if (sentinelRef.current) {
       observer1.observe(sentinelRef.current);
     }
@@ -65,6 +81,10 @@ const Projects = () => {
       observer3.observe(memoRef.current);
     }
 
+    if (votifyRef.current) {
+      observer4.observe(votifyRef.current);
+    }
+
     return () => {
       if (sentinelRef.current) {
         observer1.unobserve(sentinelRef.current);
@@ -74,6 +94,9 @@ const Projects = () => {
       }
       if (memoRef.current) {
         observer3.unobserve(memoRef.current);
+      }
+      if (votifyRef.current) {
+        observer4.unobserve(votifyRef.current);
       }
     };
   }, []);
@@ -120,6 +143,19 @@ const Projects = () => {
             <div className="relative" style={{ paddingTop: '66.67%' }}>
               <img src={rickNmorty} alt="strategy" className={`absolute top-0 left-0 right-0 bottom-0 w-full h-full transition-transform duration-500 ease-in-out transform ${tiltFrame3 ? "rotate-[-5deg]" : ""} origin-top-right`} />
             </div>
+          </div>
+        </div>
+
+        <div className="flex gap-8 flex-col md:flex-row ">
+          <div className="relative grow overflow-hidden min-w-[150px] md:max-w-[400px] md:right-16 right-7 order-2 md:order-1" ref={votifyRef}>
+            <div className="relative" style={{ paddingTop: '66.67%' }}>
+              <img src={votify} alt="strategy" className={`absolute top-0 left-0 right-0 bottom-0 w-full h-full transition-transform duration-500 ease-in-out transform ${tiltFrame4 ? "rotate-[5deg]" : ""} origin-top-left`} />
+            </div>
+          </div>
+          <div className="flex-[.6] grid grow order-1 md:order-2 text-black">
+            <AnimatedText text={"Votify"} customClassName="Outfit text-white font-bold text-xl mr-auto mb-[25px] bg-[#FF6B35] py-[2.14px] px-[9.86px] inline-block self-end w-fit justify-self-start"/>
+            <p className="md:text-lg md:text-left ">A voting web app based on US election. I designed the UI for mobile view and desktop view using Figma and directed the team that implemented the design and I also contributed to the development.</p>
+            <a href="https://emmanuelajibokun.github.io/Votify/" className="flex items-center"><p className="md:text-base text-left text-xs font-bold ">More Detail</p> <img src={danger} alt="danger sign" className="h-5" /></a>
           </div>
         </div>
 
