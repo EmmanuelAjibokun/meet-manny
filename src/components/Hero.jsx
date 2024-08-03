@@ -16,7 +16,7 @@ const Hero = () => {
             <img src={worker} alt="worker icon" width={20} className="inline" />
           </div>
           <h1 className="font-bold md:text-5xl text-3xl sm:text-2xl">I&apos;m Emmanuel Ajibokun</h1>
-          <p>I&apos;m a Frontend Developer based in Nigeria, dedicated to continual improvement of both my professional skills and personal growth. I specializing in building exceptional websites and making the web accessible to everyone.</p>
+          <p>I&apos;m a Frontend Developer based in Nigeria, dedicated to continual improvement of both my professional skills and personal growth. I&apos;m specialized in building exceptional websites and making the web accessible to everyone.</p>
           <div>
             <a href={resume} download={"Emmanuel-Ajibokun-Resume.pdf"}><button>Get my resume <span>-</span></button></a> 
           </div>

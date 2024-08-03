@@ -5,6 +5,7 @@ import cvApp from "../assets/cv_application.png";
 import danger from "../assets/danger-sign.png";
 import rickNmorty from "../assets/Rick N Morty.png";
 import votify from "../assets/votify.png";
+import etchasketch from "../assets/etchasketch.png";
 
 import { useState, useEffect, useRef } from "react";
 import { AnimatedText } from ".";
@@ -15,10 +16,12 @@ const Projects = () => {
   const [tiltFrame2, setTiltFrame2] = useState(false);
   const [tiltFrame3, setTiltFrame3] = useState(false);
   const [tiltFrame4, setTiltFrame4] = useState(false);
+  const [tiltFrame5, setTiltFrame5] = useState(false);
   const cvAppRef = useRef(null);
   const sentinelRef = useRef(null);
   const memoRef = useRef(null);
   const votifyRef = useRef(null);
+  const sketchRef = useRef(null);
 
   useEffect(() => {
     const observer1 = new IntersectionObserver(
@@ -69,6 +72,18 @@ const Projects = () => {
       { threshold: 0.2 }
     );
 
+    const observer5 = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTiltFrame5(true);
+            observer5.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
     if (sentinelRef.current) {
       observer1.observe(sentinelRef.current);
     }
@@ -85,6 +100,10 @@ const Projects = () => {
       observer4.observe(votifyRef.current);
     }
 
+    if (sketchRef.current) {
+      observer5.observe(sketchRef.current);
+    }
+
     return () => {
       if (sentinelRef.current) {
         observer1.unobserve(sentinelRef.current);
@@ -97,6 +116,9 @@ const Projects = () => {
       }
       if (votifyRef.current) {
         observer4.unobserve(votifyRef.current);
+      }
+      if (sketchRef.current) {
+        observer5.unobserve(sketchRef.current);
       }
     };
   }, []);
@@ -111,7 +133,7 @@ const Projects = () => {
           <div className="grid flex-[.6] grow text-black">
             <AnimatedText text={"Sentinel"} customClassName="Outfit text-white font-bold text-xl mr-auto mb-[25px] bg-[#FF6B35] py-[2.14px] px-[9.86px] inline-block self-end w-fit justify-self-start"/>
             <p className="md:text-lg md:text-left">This application is designed for administrators within an organization. It enables staff members to input prompts into a model, which then generates price predictions for their products based on the provided information</p>
-            <a href="https://ai.sentinelock.com/" className="flex items-center"><p className="md:text-base text-left text-xs font-bold ">More Detail</p> <img src={danger} alt="danger sign" className="h-5" /></a>
+            <a href="https://ai.sentinelock.com/" target="_blank" className="flex items-center"><p className="md:text-base text-left text-xs font-bold ">More Detail</p> <img src={danger} alt="danger sign" className="h-5" /></a>
           </div>
           <div className="relative grow overflow-hidden min-w-[150px] md:max-w-[400px] md:left-16 left-7" ref={sentinelRef}>
             <div className="relative" style={{ paddingTop: '66.67%' }}>
@@ -129,7 +151,7 @@ const Projects = () => {
           <div className="flex-[.6] grid grow order-1 md:order-2 text-black">
             <AnimatedText text={"CV Application"} customClassName="Outfit text-white font-bold text-xl mr-auto mb-[25px] bg-[#FF6B35] py-[2.14px] px-[9.86px] inline-block self-end w-fit justify-self-start"/>
             <p className="md:text-lg md:text-left ">This user-friendly tool simplifies the process of creating professional resumes. With a sleek and intuitive interface, users can easily input their personal details, work experience, and education.</p>
-            <a href="https://github.com/EmmanuelAjibokun/cv-application" className="flex items-center"><p className="md:text-base text-left text-xs font-bold ">More Detail</p> <img src={danger} alt="danger sign" className="h-5" /></a>
+            <a href="https://github.com/EmmanuelAjibokun/cv-application" target="_blank" className="flex items-center"><p className="md:text-base text-left text-xs font-bold ">More Detail</p> <img src={danger} alt="danger sign" className="h-5" /></a>
           </div>
         </div>
 
@@ -137,7 +159,7 @@ const Projects = () => {
           <div className="grid flex-[.6] grow text-black">
             <AnimatedText text={"Rick N Morty Memo"} customClassName="Outfit text-white font-bold text-xl mr-auto mb-[25px] bg-[#FF6B35] py-[2.14px] px-[9.86px] inline-block self-end w-fit justify-self-start"/>
             <p className="md:text-lg md:text-left">This application is a web based memory game that uses hooks to manage and utilize state while fetching and using data from an external API.</p>
-            <a href="https://rick-n-morty-memo.vercel.app/" className="flex items-center"><p className="md:text-base text-left text-xs font-bold ">More Detail</p> <img src={danger} alt="danger sign" className="h-5" /></a>
+            <a href="https://rick-n-morty-memo.vercel.app/" target="_blank" className="flex items-center"><p className="md:text-base text-left text-xs font-bold ">More Detail</p> <img src={danger} alt="danger sign" className="h-5" /></a>
           </div>
           <div className="relative grow overflow-hidden min-w-[150px] md:max-w-[400px] md:left-16 left-7" ref={memoRef}>
             <div className="relative" style={{ paddingTop: '66.67%' }}>
@@ -155,7 +177,20 @@ const Projects = () => {
           <div className="flex-[.6] grid grow order-1 md:order-2 text-black">
             <AnimatedText text={"Votify"} customClassName="Outfit text-white font-bold text-xl mr-auto mb-[25px] bg-[#FF6B35] py-[2.14px] px-[9.86px] inline-block self-end w-fit justify-self-start"/>
             <p className="md:text-lg md:text-left ">A voting web app based on US election. I designed the UI for mobile view and desktop view using Figma and directed the team that implemented the design and I also contributed to the development.</p>
-            <a href="https://emmanuelajibokun.github.io/Votify/" className="flex items-center"><p className="md:text-base text-left text-xs font-bold ">More Detail</p> <img src={danger} alt="danger sign" className="h-5" /></a>
+            <a href="https://emmanuelajibokun.github.io/Votify/" target="_blank" className="flex items-center"><p className="md:text-base text-left text-xs font-bold ">More Detail</p> <img src={danger} alt="danger sign" className="h-5" /></a>
+          </div>
+        </div>
+
+        <div className="flex gap-8 flex-col md:flex-row ">
+          <div className="grid flex-[.6] grow text-black">
+            <AnimatedText text={"Etch A Sketch"} customClassName="Outfit text-white font-bold text-xl mr-auto mb-[25px] bg-[#FF6B35] py-[2.14px] px-[9.86px] inline-block self-end w-fit justify-self-start"/>
+            <p className="md:text-lg md:text-left">This application is a web based memory game that uses hooks to manage and utilize state while fetching and using data from an external API.</p>
+            <a href="https://emmanuelajibokun.github.io/Odin-Project-Etch-a-sketch/" target="_blank" className="flex items-center"><p className="md:text-base text-left text-xs font-bold ">More Detail</p> <img src={danger} alt="danger sign" className="h-5" /></a>
+          </div>
+          <div className="relative grow overflow-hidden min-w-[150px] md:max-w-[400px] md:left-16 left-7" ref={sketchRef}>
+            <div className="relative" style={{ paddingTop: '66.67%' }}>
+              <img src={etchasketch} alt="strategy" className={`absolute top-0 left-0 right-0 bottom-0 w-full h-full transition-transform duration-500 ease-in-out transform ${tiltFrame5 ? "rotate-[-5deg]" : ""} origin-top-right`} />
+            </div>
           </div>
         </div>
 
