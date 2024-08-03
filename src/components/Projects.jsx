@@ -184,7 +184,7 @@ const Projects = () => {
         <div className="flex gap-8 flex-col md:flex-row ">
           <div className="grid flex-[.6] grow text-black">
             <AnimatedText text={"Etch A Sketch"} customClassName="Outfit text-white font-bold text-xl mr-auto mb-[25px] bg-[#FF6B35] py-[2.14px] px-[9.86px] inline-block self-end w-fit justify-self-start"/>
-            <p className="md:text-lg md:text-left">This application is a web based memory game that uses hooks to manage and utilize state while fetching and using data from an external API.</p>
+            <p className="md:text-lg md:text-left">This application is a browser based version of something between a sketchpad and an Etch-A-Sketch. This project significantly improved my ability to manipulate the Document Object Model (DOM).</p>
             <a href="https://emmanuelajibokun.github.io/Odin-Project-Etch-a-sketch/" target="_blank" className="flex items-center"><p className="md:text-base text-left text-xs font-bold ">More Detail</p> <img src={danger} alt="danger sign" className="h-5" /></a>
           </div>
           <div className="relative grow overflow-hidden min-w-[150px] md:max-w-[400px] md:left-16 left-7" ref={sketchRef}>
