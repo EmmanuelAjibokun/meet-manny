@@ -36,11 +36,11 @@ const Hero = () => {
           <Icons />
         </div>
         <div className="sm:mt-4">
-          <div className="flex inset-0 md:w-[250px] md:h-[250px] w-[200px] h-[200px] rounded-full border-8 border-[#a56526] border-opacity-65 pointer-events-none">
+          <div className="flex inset-0 md:w-[250px] md:h-[250px] w-[200px] h-[200px] rounded-full border-8 border-[#ffffffcf] border-opacity-65 pointer-events-none">
             <img
               src={profileImage}
               alt="manny's profile image"
-              className="w-[250px] rounded-full border-4 border-[#a56526]"
+              className="w-[250px] rounded-full border-4 border-[#fffdfa]"
             />
           </div>
         </div>
