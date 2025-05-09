@@ -12,6 +12,8 @@ import vercel from "../assets/ver2.png"
 import tailwind from "../assets/tailwind.png"
 import formik from "../assets/formik.svg"
 import material from "../assets/material.png"
+import ts from "../assets/TypeScript.png"
+import next from "../assets/Next.png"
 
 import { useState, useEffect, useRef } from "react";
 import { TypeAnimation } from 'react-type-animation';
@@ -70,8 +72,11 @@ const Skills = () => {
           <div id="languages" className="flex flex-wrap gap-3">
             <div id="language" className="flex items-end flex-nowrap gap-[4px]">
               <img src={js} width={26}  alt="Javascript" />
-              {/* <span>JavaScript</span> */}
               <AnimatedText text={"JavaScript"} />
+            </div>
+            <div id="language" className="flex items-end flex-nowrap gap-[4px]">
+              <img src={ts} width={26}  alt="TypeScript" />
+              <AnimatedText text={"TypeScript"} />
             </div>
             <div id="language" className="flex items-end flex-nowrap gap-[4px]">
               <img src={html} width={26} alt="Html" />
@@ -94,6 +99,10 @@ const Skills = () => {
             <div id="language" className="flex items-end flex-nowrap gap-[4px]">
               <img src={react} width={26} alt="React" />
               <AnimatedText text={"React"} />
+            </div>
+            <div id="language" className="flex items-end flex-nowrap gap-[4px]">
+              <img src={next} width={26} alt="NextJS" />
+              <AnimatedText text={"NextJS"} />
             </div>
             <div id="language" className="flex items-end flex-nowrap gap-[4px]">
               <img src={material} width={26} alt="MaterialUI" />
