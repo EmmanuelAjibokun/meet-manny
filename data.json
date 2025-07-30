@@ -1,6 +1,13 @@
 {
     "projects": [
     {
+      "title": "Resumine",
+      "description": "Track Your Applications & Resume Ratings. Review your submissions and check AI-powered feedback.",
+      "image": "/src/assets/resumine.png",
+      "link": "https://ai-resume-analyzer-chi-eight.vercel.app/",
+      "techStack": ["React", "Tailwind", "Vite", "Puterjs", "Zustand"]
+    },
+    {
       "title": "Shared Prompts",
       "description": "Fullstack AI prompting tool for the modern world. Built to help users discover, create, and share creative prompts for artificial intelligence engineering.",
       "image": "/src/assets/shared-prompts.png",
