@@ -1,8 +1,8 @@
-import profileImage from "../assets/profile2.jpg";
+import profileImage from "/assets/profile2.jpg";
 import { Icons } from ".";
-import worker from "../assets/worker.png";
+import worker from "/assets/worker.png";
 import ParticlesBackground from "./ParticlesBackground";
-import resume from "../assets/MyResume.pdf";
+import resume from "/assets/MyResume.pdf";
 
 const Hero = () => {
   return (

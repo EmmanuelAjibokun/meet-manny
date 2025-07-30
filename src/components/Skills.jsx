@@ -1,19 +1,19 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react-hooks/exhaustive-deps */
-import js from "../assets/js.png"
-import html from "../assets/html-5.png"
-import sass from "../assets/sass.png"
-import python from "../assets/python.png"
-import react from "../assets/physics.png"
-import github from "../assets/github.png"
-import git from "../assets/social.png"
-import photoshop from "../assets/photoshop.png"
-import vercel from "../assets/ver2.png"
-import tailwind from "../assets/tailwind.png"
-import formik from "../assets/formik.svg"
-import material from "../assets/material.png"
-import ts from "../assets/TypeScript.png"
-import next from "../assets/Next.png"
+import js from "/assets/js.png"
+import html from "/assets/html-5.png"
+import sass from "/assets/sass.png"
+import python from "/assets/python.png"
+import react from "/assets/physics.png"
+import github from "/assets/github.png"
+import git from "/assets/social.png"
+import photoshop from "/assets/photoshop.png"
+import vercel from "/assets/ver2.png"
+import tailwind from "/assets/tailwind.png"
+import formik from "/assets/formik.svg"
+import material from "/assets/material.png"
+import ts from "/assets/TypeScript.png"
+import next from "/assets/Next.png"
 
 import { useState, useEffect, useRef } from "react";
 import { TypeAnimation } from 'react-type-animation';

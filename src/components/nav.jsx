@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import icon from "../assets/bitmoji.jpg"
-import ham from "../assets/ham.png"
-import close from "../assets/close.png"
+import icon from "/assets/bitmoji.jpg"
+import ham from "/assets/ham.png"
+import close from "/assets/close.png"
 import { useState } from "react";
 import { useMediaQuery } from 'react-responsive';
-// import resume from "../assets/MyResume.pdf";
-import resume from "../assets/OluwaseunAjibokun-Resume.pdf";
+// import resume from "/assets/MyResume.pdf";
+import resume from "/assets/OluwaseunAjibokun-Resume.pdf";
 
 
 const Nav = () => {

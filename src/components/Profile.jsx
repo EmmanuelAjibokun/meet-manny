@@ -1,4 +1,4 @@
-import profile from "../assets/IMG_8021.jpg"
+import profile from "/assets/IMG_8021.jpg"
 import { AnimatedText } from "../pages/AboutMe";
 
 const Profile = () => {

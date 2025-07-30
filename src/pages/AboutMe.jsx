@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 
 import { Profile } from "../components";
-import dev from "../assets/dev.png"
+import dev from "/assets/dev.png"
 
 import { useState, useEffect, useRef } from "react";
 import { TypeAnimation } from 'react-type-animation';

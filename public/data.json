@@ -3,49 +3,49 @@
     {
       "title": "Resumine",
       "description": "Track Your Applications & Resume Ratings. Review your submissions and check AI-powered feedback.",
-      "image": "/src/assets/resumine.png",
+      "image": "/assets/resumine.png",
       "link": "https://ai-resume-analyzer-chi-eight.vercel.app/",
       "techStack": ["React", "Tailwind", "Vite", "Puterjs", "Zustand"]
     },
     {
       "title": "Shared Prompts",
       "description": "Fullstack AI prompting tool for the modern world. Built to help users discover, create, and share creative prompts for artificial intelligence engineering.",
-      "image": "/src/assets/shared-prompts.png",
+      "image": "/assets/shared-prompts.png",
       "link": "https://shared-prompts-two-beta.vercel.app/",
       "techStack": ["React", "Tailwind", "Vite"]
     },
     {
       "title": "Sentinel",
       "description": "This application is designed for administrators within an organization. It enables staff members to input prompts into a model, which then generates price predictions for their products based on the provided information",
-      "image": "/src/assets/sentinel.png",
+      "image": "/assets/sentinel.png",
       "link": "https://ai.sentinelock.com/",
       "techStack": ["React", "Node.js", "MongoDB"]
     },
     {
       "title": "CV Application",
       "description": "This user-friendly tool simplifies the process of creating professional resumes. With a sleek and intuitive interface, users can easily input their personal details, work experience, and education.",
-      "image": "/src/assets/cv_application.png",
+      "image": "/assets/cv_application.png",
       "link": "https://github.com/EmmanuelAjibokun/cv-application",
       "techStack": ["React", "Node.js", "MongoDB"]
     },
     {
       "title": "Rick N Morty Memo",
       "description": "This application is a web based memory game that uses hooks to manage and utilize state while fetching and using data from an external API.",
-      "image": "/src/assets/Rick N Morty.png",
+      "image": "/assets/Rick N Morty.png",
       "link": "https://rick-n-morty-memo.vercel.app/",
       "techStack": ["React", "Node.js", "MongoDB"]
     },
     {
       "title": "Votify",
       "description": "A voting web app based on US election. I designed the UI for mobile view and desktop view using Figma and directed the team that implemented the design and I also contributed to the development.",
-      "image": "/src/assets/votify.png",
+      "image": "/assets/votify.png",
       "link": "https://emmanuelajibokun.github.io/Votify/",
       "techStack": ["React", "Node.js", "MongoDB"]
     },
     {
       "title": "Etch A Sketch",
       "description": "This application is a browser based version of something between a sketchpad and an Etch-A-Sketch. This project significantly improved my ability to manipulate the Document Object Model (DOM).",
-      "image": "/src/assets/etchasketch.png",
+      "image": "/assets/etchasketch.png",
       "link": "https://emmanuelajibokun.github.io/Odin-Project-Etch-a-sketch/",
       "techStack": ["React", "Node.js", "MongoDB"]
     }

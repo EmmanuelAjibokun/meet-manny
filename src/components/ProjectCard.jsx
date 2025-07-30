@@ -2,7 +2,7 @@
 // components/ProjectCard.jsx
 
 import { AnimatedText } from ".";
-import danger from '../assets/danger-sign.png';
+import danger from '/assets/danger-sign.png';
 
 export default function ProjectCard({
   project,

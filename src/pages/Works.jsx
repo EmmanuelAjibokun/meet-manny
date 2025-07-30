@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
-import multitasker from "../assets/multitasker.png"
+import multitasker from "/assets/multitasker.png"
 import { Projects } from "../components"
 
 import { useState, useEffect, useRef } from "react";
